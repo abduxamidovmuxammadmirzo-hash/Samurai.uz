@@ -5,9 +5,10 @@ import { useMemo, useState } from "react";
 
 import blackTea from "@/img/drinks/tea/black_tea.png";
 import greenTea from "@/img/drinks/tea/green_tea.png";
-import kiwiLemonade from "@/img/drinks/kiwi_lemonade.png";
-import limeLemonade from "@/img/drinks/lime_lemonade.png";
-import passionFruit from "@/img/drinks/passion_fruit.png";
+import blueCuracaoMojito from "@/img/drinks/голубой.jpg";
+import orangeMojito from "@/img/drinks/апельсиновый.jpg";
+import berryMojito from "@/img/drinks/клубничный.jpg";
+import passionFruitMojito from "@/img/drinks/маракуйя.jpg";
 import bbqPizza from "@/img/meals/pizza/барбекю пицца.jpg";
 import caesarPizza from "@/img/meals/pizza/Пицца цезарь.jpg";
 import chickenPizza from "@/img/meals/pizza/пицца с курицой.jpg";
@@ -202,35 +203,35 @@ const snackDishes: Dish[] = [
     id: "snack-soft-rolls",
     name: "Нежные роллы",
     description: "Лёгкая и мягкая закуска с нежным вкусом.",
-    price: "180",
+    price: "18",
     image: snackSoftRolls.src,
   },
   {
     id: "snack-cheese-stick",
     name: "Сырная палочка",
     description: "Сытная закуска с насыщенным сырным вкусом.",
-    price: "220",
+    price: "22",
     image: snackCheeseStick.src,
   },
   {
     id: "snack-cheese-balls",
     name: "Сырные шарики",
     description: "Хрустящие сырные шарики с золотистой корочкой.",
-    price: "210",
+    price: "21",
     image: snackCheeseBalls.src,
   },
   {
     id: "snack-garlic-toast",
     name: "Чесночная гренка",
     description: "Пикантная гренка с ароматом чеснока и зелени.",
-    price: "190",
+    price: "19",
     image: snackGarlicToast.src,
   },
   {
     id: "snack-chocolate-rolls",
     name: "Шоколадные роллы",
     description: "Сладкая закуска для любителей десерта.",
-    price: "240",
+    price: "24",
     image: snackChocolateRolls.src,
   },
 ];
@@ -289,7 +290,7 @@ const pizzaDishes: Dish[] = [
     id: "pizza8",
     name: "BBQ Пицца",
     description: "Пицца с соусом BBQ, курицей и ароматными специями.",
-    price: "704",
+    price: "71",
     image: bbqPizza.src,
   },
 ];
@@ -361,27 +362,27 @@ const coldRollDishes: Dish[] = [
   { id: "cold-roll-18", name: "Премиум гонконг", description: "Премиальный ролл в гонконгском стиле.", price: "110", image: coldRollImages[17] },
   { id: "cold-roll-19", name: "Филадельфия ролл", description: "Классический филадельфия ролл.", price: "76.3", image: coldRollImages[18] },
   { id: "cold-roll-20", name: "Император с креветкой", description: "Императорский ролл с креветкой.", price: "72", image: coldRollImages[19] },
-  { id: "cold-roll-21", name: "Самурай", description: "Ролл в фирменном самурайском стиле.", price: "37.9", image: coldRollImages[20] },
-  { id: "cold-roll-22", name: "Аляска", description: "Популярный ролл с классическим вкусом.", price: "55.9", image: coldRollImages[21] },
-  { id: "cold-roll-23", name: "Тобикири", description: "Нежный ролл с мягкой текстурой.", price: "83.64", image: coldRollImages[22] },
+  { id: "cold-roll-21", name: "Самурай", description: "Ролл в фирменном самурайском стиле.", price: "37", image: coldRollImages[20] },
+  { id: "cold-roll-22", name: "Аляска", description: "Популярный ролл с классическим вкусом.", price: "60", image: coldRollImages[21] },
+  { id: "cold-roll-23", name: "Тобикири", description: "Нежный ролл с мягкой текстурой.", price: "84", image: coldRollImages[22] },
   { id: "cold-roll-24", name: "Мини с огурцами", description: "Лёгкий мини-ролл с огурцом.", price: "25", image: coldRollImages[23] },
-  { id: "cold-roll-25", name: "Император", description: "Фирменный ролл с насыщенной начинкой.", price: "97.3", image: coldRollImages[24] },
+  { id: "cold-roll-25", name: "Император", description: "Фирменный ролл с насыщенной начинкой.", price: "97", image: coldRollImages[24] },
   { id: "cold-roll-26", name: "Филадельфия", description: "Классический сливочный ролл.", price: "84", image: coldRollImages[25] },
-  { id: "cold-roll-27", name: "Мини с угрем", description: "Мини-ролл с угрем.", price: "27.6", image: coldRollImages[26] },
-  { id: "cold-roll-28", name: "Ролл королевский", description: "Ролл с королевской подачей и вкусом.", price: "54.32", image: coldRollImages[27] },
-  { id: "cold-roll-29", name: "Ролл Калифорния с лососем", description: "Классическая Калифорния с лососем.", price: "55.4", image: coldRollImages[28] },
+  { id: "cold-roll-27", name: "Мини с угрем", description: "Мини-ролл с угрем.", price: "27", image: coldRollImages[26] },
+  { id: "cold-roll-28", name: "Ролл королевский", description: "Ролл с королевской подачей и вкусом.", price: "54", image: coldRollImages[27] },
+  { id: "cold-roll-29", name: "Ролл Калифорния с лососем", description: "Классическая Калифорния с лососем.", price: "56", image: coldRollImages[28] },
   { id: "cold-roll-30", name: "Ф краб", description: "Ролл с крабом и свежей начинкой.", price: "85", image: coldRollImages[29] },
-  { id: "cold-roll-31", name: "Унаги", description: "Классический ролл с унаги.", price: "67.7", image: coldRollImages[30] },
-  { id: "cold-roll-32", name: "Калифорния креветка", description: "Ролл с креветкой в стиле Калифорния.", price: "62.25", image: coldRollImages[31] },
+  { id: "cold-roll-31", name: "Унаги", description: "Классический ролл с унаги.", price: "68", image: coldRollImages[30] },
+  { id: "cold-roll-32", name: "Калифорния креветка", description: "Ролл с креветкой в стиле Калифорния.", price: "63", image: coldRollImages[31] },
   { id: "cold-roll-33", name: "Премиум лосось", description: "Премиальный ролл с лососем.", price: "112", image: coldRollImages[32] },
-  { id: "cold-roll-34", name: "Бонито", description: "Ролл с бонито и ярким вкусом.", price: "60.152", image: coldRollImages[33] },
-  { id: "cold-roll-35", name: "Маленький с угрем", description: "Небольшой ролл с угрем.", price: "27.6", image: coldRollImages[34] },
-  { id: "cold-roll-36", name: "Калифорния с лососем", description: "Свежий ролл Калифорния с лососем.", price: "55.4", image: coldRollImages[35] },
+  { id: "cold-roll-34", name: "Бонито", description: "Ролл с бонито и ярким вкусом.", price: "60", image: coldRollImages[33] },
+  { id: "cold-roll-35", name: "Маленький с угрем", description: "Небольшой ролл с угрем.", price: "28", image: coldRollImages[34] },
+  { id: "cold-roll-36", name: "Калифорния с лососем", description: "Свежий ролл Калифорния с лососем.", price: "56", image: coldRollImages[35] },
   { id: "cold-roll-37", name: "Филадельфия краб", description: "Филадельфия с крабом.", price: "85", image: coldRollImages[36] },
-  { id: "cold-roll-38", name: "Унаги чиз", description: "Ролл с унаги и сыром.", price: "67.7", image: coldRollImages[37] },
-  { id: "cold-roll-39", name: "Калифорния креветка", description: "Классический ролл Калифорния с креветкой.", price: "62.25", image: coldRollImages[38] },
+  { id: "cold-roll-38", name: "Унаги чиз", description: "Ролл с унаги и сыром.", price: "68", image: coldRollImages[37] },
+  { id: "cold-roll-39", name: "Калифорния креветка", description: "Классический ролл Калифорния с креветкой.", price: "62", image: coldRollImages[38] },
   { id: "cold-roll-40", name: "Премиум лосось", description: "Премиальная версия ролла с лососем.", price: "112", image: coldRollImages[39] },
-  { id: "cold-roll-41", name: "Бонито с угрем", description: "Комбинация бонито и угря.", price: "60.152", image: coldRollImages[40] },
+  { id: "cold-roll-41", name: "Бонито с угрем", description: "Комбинация бонито и угря.", price: "60", image: coldRollImages[40] },
   { id: "cold-roll-42", name: "Филадельфия зелёный лук", description: "Ролл с зелёным луком и сливочным сыром.", price: "62", image: coldRollImages[41] },
   { id: "cold-roll-43", name: "Премиум Дракон", description: "Ролл премиум класса с фирменным вкусом.", price: "126", image: coldRollImages[42] },
 ];
@@ -503,7 +504,7 @@ const menu: MenuCategory[] = [
         id: "hot-roll-hawaii",
         name: "Гавайи от шефа",
         description: "Горячий ролл с экзотическим вкусом.",
-        price: "59.5",
+        price: "60",
         image: hawaiiHotRoll.src,
       },
       {
@@ -602,51 +603,22 @@ const menu: MenuCategory[] = [
         id: "wok-buckwheat",
         name: "Гречневая лапша",
         description: "Гречневая лапша с ярким wok-вкусом.",
-        price: "62.3",
+        price: "62",
         image: buckwheatNoodles.src,
       },
       {
         id: "wok-beef-udon",
         name: "Вок лапша удон с говядиной",
         description: "Удон с говядиной и овощами.",
-        price: "69.9",
+        price: "70",
         image: beefUdonWok.src,
       },
       {
         id: "wok-chicken-noodles",
         name: "Лапша с курицой",
         description: "Лапша с курицей и ароматным соусом.",
-        price: "69.9",
+        price: "69",
         image: chickenNoodles.src,
-      },
-    ],
-  },
-  {
-    id: "hot-dishes",
-    name: "Горячие блюда",
-    subtitle: "Главные блюда",
-    image: chickenWok.src,
-    dishes: [
-      {
-        id: "hot1",
-        name: "Бефстроганов",
-        description: "Нежная говядина в сливочно-грибном соусе.",
-        price: "680",
-        image: beefWok.src,
-      },
-      {
-        id: "hot2",
-        name: "Курица в соусе",
-        description: "Сочное куриное филе с пикантным соусом.",
-        price: "540",
-        image: chickenWok.src,
-      },
-      {
-        id: "hot3",
-        name: "Стейк",
-        description: "Говяжья котлета с жареным картофелем и зеленью.",
-        price: "760",
-        image: doubleBeef.src,
       },
     ],
   },
@@ -660,7 +632,7 @@ const menu: MenuCategory[] = [
         id: "soup1",
         name: "Фобо",
         description: "Азиатский суп с говядиной и ароматными специями.",
-        price: "52.2",
+        price: "52",
         image: beefWok.src,
       },
       {
@@ -704,42 +676,35 @@ const menu: MenuCategory[] = [
     id: "lemonades",
     name: "Лимонады",
     subtitle: "Освежающие напитки",
-    image: limeLemonade.src,
+    image: blueCuracaoMojito.src,
     dishes: [
       {
         id: "mohito1",
-        name: "Мохито гобуая Кюрасао",
+        name: "Мохито Голубая Кюрасао",
         description: "Освежающий мохито с ярким вкусом голубой курасао.",
-        price: "35.4",
-        image: limeLemonade.src,
+        price: "35",
+        image: blueCuracaoMojito.src,
       },
       {
         id: "mohito2",
         name: "Мохито манго",
         description: "Свежий мохито с тропическим вкусом манго.",
-        price: "17.5",
-        image: passionFruit.src,
+        price: "35",
+        image: berryMojito.src,
       },
       {
         id: "mohito3",
-        name: "Мохито клубничный",
-        description: "Лёгкий мохито с яркой клубничной сладостью.",
-        price: "35.4",
-        image: kiwiLemonade.src,
+        name: "Мохито апельсиновый",
+        description: "Освежающий мохито с цитрусовой ноткой апельсина.",
+        price: "35",
+        image: orangeMojito.src,
       },
       {
         id: "mohito4",
-        name: "Мохито аплельсиновый",
-        description: "Освежающий мохито с цитрусовой ноткой апельсина.",
-        price: "35.5",
-        image: passionFruit.src,
-      },
-      {
-        id: "mohito5",
         name: "Мохито маракуйя",
         description: "Мохито с экзотическим вкусом маракуйи и лёгкой кислинкой.",
-        price: "35.5",
-        image: kiwiLemonade.src,
+        price: "35",
+        image: passionFruitMojito.src,
       },
     ],
   },
@@ -760,14 +725,14 @@ const menu: MenuCategory[] = [
         id: "tea2",
         name: "Зелёный чай",
         description: "Лёгкий и освежающий напиток для любого времени дня.",
-        price: "22.4",
+        price: "23",
         image: greenTea.src,
       },
       {
         id: "tea3",
         name: "Чёрный чай",
         description: "Классический ароматный чай с мягким вкусом.",
-        price: "21.5",
+        price: "21",
         image: blackTea.src,
       },
     ],
@@ -1032,7 +997,7 @@ const Category = ({ language }: { language: Language }) => {
 
   const displayedDishes = activeSubcategory?.dishes ?? activeCategory.dishes ?? [];
   const isLemonadeImage = (image: string) =>
-    [limeLemonade.src, passionFruit.src, kiwiLemonade.src].includes(image);
+    [blueCuracaoMojito.src, orangeMojito.src, berryMojito.src, passionFruitMojito.src].includes(image);
 
   const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   const cartTotal = cartItems.reduce((sum, item) => {
@@ -1244,7 +1209,7 @@ const Category = ({ language }: { language: Language }) => {
                         width={800}
                         height={600}
                         loading="eager"
-                        className={`h-44 w-full ${isLemonadeImage(subcategory.image) ? "object-contain bg-[#12090c] p-2" : "object-cover"}`}
+                        className={`h-44 w-full ${isLemonadeImage(subcategory.image) ? "object-contain object-center bg-[#12090c] p-2" : "object-cover"}`}
                       />
                       <div className="px-4 py-3">
                         <div className="text-lg font-bold text-white">
@@ -1284,7 +1249,7 @@ const Category = ({ language }: { language: Language }) => {
                       width={800}
                       height={600}
                       loading="eager"
-                      className={`h-52 w-full ${isLemonadeImage(dish.image) ? "object-contain bg-[#12090c] p-2" : "object-cover"}`}
+                      className={`h-52 w-full ${isLemonadeImage(dish.image) ? "object-contain object-center bg-[#12090c] p-2" : "object-cover"}`}
                     />
                     <div className="space-y-3 p-4">
                       <div className="flex items-start justify-between gap-3">
@@ -1310,6 +1275,62 @@ const Category = ({ language }: { language: Language }) => {
           </div>
         </div>
       </div>
+
+      <section id="contacts" className="mx-auto mt-10 max-w-6xl px-4 pb-12 sm:px-6 lg:px-8">
+        <div className="rounded-[30px] border border-red-800/70 bg-gradient-to-r from-[#1b090d] via-[#2b0d14] to-[#1d090e] p-6 shadow-2xl shadow-black/20 sm:p-8">
+          <div className="mb-6 flex items-center gap-3">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-amber-500/15 text-amber-300">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M7 5.5A2.5 2.5 0 0 1 9.5 3h.4A2.5 2.5 0 0 1 12.4 5.5v1.2A2.5 2.5 0 0 1 10 9.2H9.5A2.5 2.5 0 0 1 7 6.7V5.5Z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5.5 8.5h13A2.5 2.5 0 0 1 21 11v4.5A2.5 2.5 0 0 1 18.5 18h-13A2.5 2.5 0 0 1 3 15.5V11a2.5 2.5 0 0 1 2.5-2.5Z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8.5 12.5h7" />
+              </svg>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-[0.24em] text-amber-200/80">Контакты</p>
+              <h3 className="mt-1 text-2xl font-black text-white">Samurai</h3>
+            </div>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2">
+            <a
+              href="https://wa.me/998904123232"
+              target="_blank"
+              rel="noreferrer"
+              className="group flex items-center gap-4 rounded-2xl border border-green-500/40 bg-green-500/10 p-4 transition hover:border-green-400 hover:bg-green-500/15"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-500/20 text-green-300">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6" aria-hidden="true">
+                  <path d="M12.04 2C6.59 2 2.17 6.34 2.17 11.73c0 1.95.58 3.82 1.59 5.42L2 22l4.96-1.64a9.78 9.78 0 0 0 5.08 1.56h.01c5.45 0 9.87-4.34 9.87-9.73S17.49 2 12.04 2Zm0 17.82c-1.52 0-3.02-.4-4.33-1.15l-.31-.18-2.95.98 1-2.87-.21-.31A7.9 7.9 0 0 1 4.1 11.73c0-4.25 3.65-7.7 8.13-7.7 4.48 0 8.13 3.45 8.13 7.7 0 4.26-3.65 7.71-8.13 7.71Zm4.53-5.88c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.16.25-.64.81-.78.98-.14.16-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.4-1.75-.15-.25-.02-.38.11-.5.11-.11.25-.29.38-.43.13-.14.17-.25.25-.41.08-.16.04-.3-.02-.42-.06-.13-.56-1.35-.76-1.85-.2-.48-.4-.42-.56-.42h-.48c-.16 0-.42.06-.64.3-.22.25-.85.83-.85 2.03 0 1.2.87 2.36.99 2.52.12.16 1.72 2.62 4.18 3.68.58.25 1.02.4 1.37.51.58.18 1.11.15 1.52.09.46-.07 1.47-.6 1.68-1.18.2-.58.2-1.07.13-1.18-.06-.11-.23-.18-.48-.31Z"/>
+                </svg>
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-white/60">WhatsApp</p>
+                <p className="mt-1 text-lg font-bold text-white">+998 90 412 32 32</p>
+              </div>
+            </a>
+
+            <a
+              href="https://instagram.com/samurai_uz"
+              target="_blank"
+              rel="noreferrer"
+              className="group flex items-center gap-4 rounded-2xl border border-pink-500/40 bg-pink-500/10 p-4 transition hover:border-pink-400 hover:bg-pink-500/15"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-pink-500/20 text-pink-300">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-6 w-6" aria-hidden="true">
+                  <rect x="3.5" y="3.5" width="17" height="17" rx="4" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-white/60">Instagram</p>
+                <p className="mt-1 text-lg font-bold text-white">@samurai_uz</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
 
       <button
         type="button"
@@ -1376,7 +1397,7 @@ const Category = ({ language }: { language: Language }) => {
                       alt={item.dish.name}
                       width={120}
                       height={120}
-                      className={`h-20 w-20 rounded-xl ${isLemonadeImage(item.dish.image) ? "object-contain bg-[#12090c] p-1" : "object-cover"}`}
+                      className={`h-20 w-20 rounded-xl ${isLemonadeImage(item.dish.image) ? "object-contain object-center bg-[#12090c] p-1" : "object-cover"}`}
                     />
 
                     <div className="flex min-w-0 flex-1 flex-col justify-between gap-3">

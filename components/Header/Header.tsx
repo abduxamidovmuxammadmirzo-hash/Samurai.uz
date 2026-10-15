@@ -38,10 +38,10 @@ const Header = ({ language, onLanguageChange }: HeaderProps) => {
           {navLabels[language].map((item, index) => (
             <a
               key={item}
-              href="#"
+              href={index === 2 ? "#contacts" : "#"}
               className="relative px-2 py-1 text-red-100 transition-colors duration-200 hover:text-white after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:bg-red-400 after:transition-transform after:duration-300 hover:after:scale-x-100"
             >
-              {index === 0 ? item : item}
+              {item}
             </a>
           ))}
         </nav>
@@ -86,9 +86,12 @@ const Header = ({ language, onLanguageChange }: HeaderProps) => {
       {isOpen && (
         <div className="border-t border-red-900 bg-red-950 px-3 py-4 transition-all md:hidden sm:px-4">
           <ul className="flex flex-col space-y-2.5 font-medium">
-            {navLabels[language].map((item) => (
+            {navLabels[language].map((item, index) => (
               <li key={item}>
-                <a href="#" className="block rounded-lg px-3 py-2 text-sm text-red-100 transition hover:bg-red-900 hover:text-white">
+                <a
+                  href={index === 2 ? "#contacts" : "#"}
+                  className="block rounded-lg px-3 py-2 text-sm text-red-100 transition hover:bg-red-900 hover:text-white"
+                >
                   {item}
                 </a>
               </li>
