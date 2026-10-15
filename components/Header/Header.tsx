@@ -18,7 +18,7 @@ const languages: { value: Language; label: string }[] = [
 const navLabels: Record<Language, string[]> = {
   ru: ["Главная", "О нас", "Контакты"],
   uzLat: ["Bosh sahifa", "Biz haqimizda", "Kontaktlar"],
-  uzCy: ["Бош сахифа", "Биз ҳақимизда", "Контактлар"],
+  uzCy: ["Бош саҳифа", "Биз ҳақимизда", "Контактлар"],
 };
 
 const Header = ({ language, onLanguageChange }: HeaderProps) => {
