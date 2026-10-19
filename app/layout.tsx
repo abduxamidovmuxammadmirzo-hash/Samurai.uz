@@ -14,6 +14,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Samurai restaurant",
+  icons: {
+    icon: "/samurai_house.jpg",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -5,12 +5,15 @@ import { useMemo, useState } from "react";
 
 import blackTea from "@/img/drinks/tea/black_tea.png";
 import greenTea from "@/img/drinks/tea/green_tea.png";
-import blueCuracaoMojito from "@/img/drinks/голубой.jpg";
-import orangeMojito from "@/img/drinks/апельсиновый.jpg";
-import berryMojito from "@/img/drinks/клубничный.jpg";
-import passionFruitMojito from "@/img/drinks/маракуйя.jpg";
+import blueCuracaoMojito from "@/img/drinks/lemonades/Мохито Голубая Кюрасао.jpg";
+import blueCuracaoMojitoSmall from "@/img/drinks/lemonades/Мохито Голубая Кюрасао маленький.jpg";
+import orangeMojito from "@/img/drinks/lemonades/Мохито Апельсиновый.jpg";
+import orangeMojitoSmall from "@/img/drinks/lemonades/Мохито Апельсиновый маленький.jpg";
+import berryMojito from "@/img/drinks/lemonades/Мохито клубничный.jpg";
+import berryMojitoSmall from "@/img/drinks/lemonades/Мохито клубничный маленький.jpg";
+import passionFruitMojito from "@/img/drinks/lemonades/Мохито Маракуйя.jpg";
+import passionFruitMojitoSmall from "@/img/drinks/lemonades/Мохито Маракуйя маленький.jpg";
 import bbqPizza from "@/img/meals/pizza/барбекю пицца.jpg";
-import caesarPizza from "@/img/meals/pizza/Пицца цезарь.jpg";
 import chickenPizza from "@/img/meals/pizza/пицца с курицой.jpg";
 import fourCheesePizza from "@/img/meals/pizza/пицца 4 сыра.jpg";
 import fumePizza from "@/img/meals/pizza/Пицца фуме.jpg";
@@ -30,6 +33,7 @@ import snackCheeseStick from "@/img/snacks/сырная палочка.jpg";
 import snackCheeseBalls from "@/img/snacks/сырные шарики.jpg";
 import snackGarlicToast from "@/img/snacks/чесночная гренка.jpg";
 import snackChocolateRolls from "@/img/snacks/шоколадные роллы.jpg";
+import snackWasabiShrimp from "@/img/snacks/КРЕВЕТКИ ВАСАБИ.jpg";
 import setCalifornia from "@/img/sets/california.jpg";
 import setChicken from "@/img/sets/chicken.jpg";
 import setDragon from "@/img/sets/dragon.jpg";
@@ -49,57 +53,92 @@ import hotPhiladelphiaRoll from "@/img/hot_rolls/Hot_Philadelphia_Roll.jpg";
 import salmonHotDog from "@/img/hot_rolls/Salmon_Sushi_Hot_Dog.jpg";
 import shrimpHotDog from "@/img/hot_rolls/Shrimp_Sushi_Hot_Dog.jpg";
 import surimiShrimpHotRoll from "@/img/hot_rolls/Surimi_and_Shrimp_Hot_Roll.jpg";
-import coldRoll1 from "@/img/cold_rolls/photo_1_2026-10-15_01-13-56.jpg";
-import coldRoll2 from "@/img/cold_rolls/photo_2_2026-10-15_01-13-56.jpg";
-import coldRoll3 from "@/img/cold_rolls/photo_3_2026-10-15_01-13-56.jpg";
-import coldRoll4 from "@/img/cold_rolls/photo_4_2026-10-15_01-13-56.jpg";
-import coldRoll5 from "@/img/cold_rolls/photo_5_2026-10-15_01-13-56.jpg";
-import coldRoll6 from "@/img/cold_rolls/photo_6_2026-10-15_01-13-56.jpg";
-import coldRoll7 from "@/img/cold_rolls/photo_7_2026-10-15_01-13-56.jpg";
-import coldRoll8 from "@/img/cold_rolls/photo_8_2026-10-15_01-13-56.jpg";
-import coldRoll9 from "@/img/cold_rolls/photo_9_2026-10-15_01-13-56.jpg";
-import coldRoll10 from "@/img/cold_rolls/photo_10_2026-10-15_01-13-56.jpg";
-import coldRoll11 from "@/img/cold_rolls/photo_11_2026-10-15_01-13-56.jpg";
-import coldRoll12 from "@/img/cold_rolls/photo_12_2026-10-15_01-13-56.jpg";
-import coldRoll13 from "@/img/cold_rolls/photo_13_2026-10-15_01-13-56.jpg";
-import coldRoll14 from "@/img/cold_rolls/photo_14_2026-10-15_01-13-56.jpg";
-import coldRoll15 from "@/img/cold_rolls/photo_15_2026-10-15_01-13-56.jpg";
-import coldRoll16 from "@/img/cold_rolls/photo_16_2026-10-15_01-13-56.jpg";
-import coldRoll17 from "@/img/cold_rolls/photo_17_2026-10-15_01-13-56.jpg";
-import coldRoll18 from "@/img/cold_rolls/photo_18_2026-10-15_01-13-56.jpg";
-import coldRoll19 from "@/img/cold_rolls/photo_19_2026-10-15_01-13-56.jpg";
-import coldRoll20 from "@/img/cold_rolls/photo_20_2026-10-15_01-13-56.jpg";
-import coldRoll21 from "@/img/cold_rolls/photo_21_2026-10-15_01-13-56.jpg";
-import coldRoll22 from "@/img/cold_rolls/photo_22_2026-10-15_01-13-56.jpg";
-import coldRoll23 from "@/img/cold_rolls/photo_23_2026-10-15_01-13-56.jpg";
-import coldRoll24 from "@/img/cold_rolls/photo_24_2026-10-15_01-13-56.jpg";
-import coldRoll25 from "@/img/cold_rolls/photo_25_2026-10-15_01-13-56.jpg";
-import coldRoll26 from "@/img/cold_rolls/photo_26_2026-10-15_01-13-56.jpg";
-import coldRoll27 from "@/img/cold_rolls/photo_27_2026-10-15_01-13-56.jpg";
-import coldRoll28 from "@/img/cold_rolls/photo_28_2026-10-15_01-13-56.jpg";
-import coldRoll29 from "@/img/cold_rolls/photo_29_2026-10-15_01-13-56.jpg";
-import coldRoll30 from "@/img/cold_rolls/photo_30_2026-10-15_01-13-56.jpg";
-import coldRoll31 from "@/img/cold_rolls/photo_31_2026-10-15_01-13-56.jpg";
-import coldRoll32 from "@/img/cold_rolls/photo_32_2026-10-15_01-13-56.jpg";
-import coldRoll33 from "@/img/cold_rolls/photo_33_2026-10-15_01-13-56.jpg";
-import coldRoll34 from "@/img/cold_rolls/photo_34_2026-10-15_01-13-56.jpg";
-import coldRoll35 from "@/img/cold_rolls/photo_35_2026-10-15_01-13-56.jpg";
-import coldRoll36 from "@/img/cold_rolls/photo_36_2026-10-15_01-13-56.jpg";
-import coldRoll37 from "@/img/cold_rolls/photo_37_2026-10-15_01-13-57.jpg";
-import coldRoll38 from "@/img/cold_rolls/photo_38_2026-10-15_01-13-57.jpg";
-import coldRoll39 from "@/img/cold_rolls/photo_39_2026-10-15_01-13-57.jpg";
-import coldRoll40 from "@/img/cold_rolls/photo_40_2026-10-15_01-13-57.jpg";
-import coldRoll41 from "@/img/cold_rolls/photo_41_2026-10-15_01-13-57.jpg";
-import coldRoll42 from "@/img/cold_rolls/photo_42_2026-10-15_01-13-57.jpg";
-import coldRoll43 from "@/img/cold_rolls/photo_43_2026-10-15_01-13-57.jpg";
-import beefUdonWok from "@/img/woks/Beef Udon Wok.jpg";
-import beefWok from "@/img/woks/Beef Wok.jpg";
-import buckwheatNoodles from "@/img/woks/Buckwheat Noodles.jpg";
-import chickenNoodles from "@/img/woks/Chicken Noodles.jpg";
-import chickenUdonWok from "@/img/woks/Chicken Udon Wok.jpg";
-import chickenWok from "@/img/woks/Chicken Wok.jpg";
-import doubleBeef from "@/img/woks/Double Beef.jpg";
-import seafoodWok from "@/img/woks/Seafood Wok.jpg";
+import alaska from "@/img/cold_rolls/alaska.jpg";
+import bonitoEel from "@/img/cold_rolls/bonito eek.jpg";
+import bonitoSalmon from "@/img/cold_rolls/bonito salmon.jpg";
+import bonitoSpicy from "@/img/cold_rolls/bonito_spicy.jpg";
+import californiaCrab from "@/img/cold_rolls/california crab.jpg";
+import californiaSalmon from "@/img/cold_rolls/california salmon.jpg";
+import californiaShrimp from "@/img/cold_rolls/california shrimp.jpg";
+import crunchyRolls from "@/img/cold_rolls/crunchy rolls.jpg";
+import greenAlaska from "@/img/cold_rolls/green_alaska.jpg";
+import imperator from "@/img/cold_rolls/imperator.jpg";
+import imperatorSalmon from "@/img/cold_rolls/imperator_salmon.jpg";
+import imperatorShrimp from "@/img/cold_rolls/imperator_shrimp.jpg";
+import miniAvocado from "@/img/cold_rolls/mini avocado.jpg";
+import miniEel from "@/img/cold_rolls/mini eel.jpg";
+import miniCucumber from "@/img/cold_rolls/mini_cucumber.jpg";
+import miniSalmon from "@/img/cold_rolls/mini_salmon.jpg";
+import miniShrimp from "@/img/cold_rolls/mini_shrimp.jpg";
+import philadelphiaGigant from "@/img/cold_rolls/philadelfia gigant.jpg";
+import philadelphia from "@/img/cold_rolls/philadelfia.jpg";
+import philadelphiaClassic from "@/img/cold_rolls/philadelfia_classic.jpg";
+import philadelphiaCrab from "@/img/cold_rolls/philadelfia_crab.jpg";
+import philadelphiaGreenOnion from "@/img/cold_rolls/philadelfia_green_onion.jpg";
+import philadelphiaShrimp from "@/img/cold_rolls/philadelfia_shrimp.jpg";
+import premiumHongKong from "@/img/cold_rolls/premium hongkong.jpg";
+import premiumSalmon from "@/img/cold_rolls/premium salmon.jpg";
+import premiumShrimp from "@/img/cold_rolls/premium shrimp.jpg";
+import premiumTuna from "@/img/cold_rolls/premium tuna.jpg";
+import premiumDragon from "@/img/cold_rolls/premium_dragon.jpg";
+import rollsTomYam from "@/img/cold_rolls/rolls_tomyam.jpg";
+import royalty from "@/img/cold_rolls/royalty.jpg";
+import samurai from "@/img/cold_rolls/samurai.jpg";
+import tobikiri from "@/img/cold_rolls/tobikiri.jpg";
+import unagiUramaki from "@/img/cold_rolls/Unagi Uramaki.jpg";
+import unagiCheese from "@/img/cold_rolls/unagi_cheese.jpg";
+import yasay from "@/img/cold_rolls/yasay.jpg";
+import wokN12BeefRice from "@/img/woks/N-12 ВОК ГОВЯДИНА С РИСОМ.jpg";
+import wokN3SeafoodBuckwheat from "@/img/woks/N-3 ГРЕЧНЕВАЯ ЛАПША С МОРЕПРОДУКТАМИ.jpg";
+import wokDoubleBeef from "@/img/woks/ВОК №,1 ДВОЙНОЙ ГОВЯДИНА.jpg";
+import wokN4ChickenUdon from "@/img/woks/N-4 ВОК ЛАПША УДОН С КУРИЦЕЙ.jpg";
+import wokN11Chicken from "@/img/woks/N-11 ВОК С КУРИЦЕЙ.jpg";
+import wokN2Beef from "@/img/woks/N-2 ВОК ГОВЯЖИЙ.jpg";
+import wokN6Seafood from "@/img/woks/N-6 ВОК МОРЕПРОДУКТАМИ.jpg";
+import wokN9ChickenBuckwheat from "@/img/woks/N-9 ГРЕЧНЕВАЯ ЛАПША С КУРИЦЕЙ.jpg";
+import teriyakiVegetablesRice from "@/img/woks/Овощи терияки с рисом.jpg";
+import wokN7SalmonUdon from "@/img/woks/N-7 ВОК ЛАПША УДОН С ЛОСОСЕМ.jpg";
+import wokN10BeefBuckwheat from "@/img/woks/N-10 ГРЕЧНЕВАЯ ЛАПША С ГОВЯДИНОЙ.jpg";
+import wokN5BeefUdon from "@/img/woks/N-5 ВОК ЛАПША УДОН С говядиной.jpg";
+import wokN8ChickenUdon from "@/img/woks/N-8 ЛАПША УДОН С КУРИЦЕЙ.jpg";
+
+const coldRollImages = [
+  premiumDragon.src,
+  philadelphiaGreenOnion.src,
+  miniSalmon.src,
+  philadelphiaShrimp.src,
+  yasay.src,
+  rollsTomYam.src,
+  bonitoSpicy.src,
+  premiumShrimp.src,
+  philadelphiaGigant.src,
+  miniShrimp.src,
+  crunchyRolls.src,
+  californiaCrab.src,
+  premiumTuna.src,
+  unagiUramaki.src,
+  imperator.src,
+  bonitoSalmon.src,
+  miniAvocado.src,
+  premiumHongKong.src,
+  philadelphiaClassic.src,
+  imperatorShrimp.src,
+  samurai.src,
+  alaska.src,
+  tobikiri.src,
+  miniCucumber.src,
+  philadelphia.src,
+  miniEel.src,
+  royalty.src,
+  californiaSalmon.src,
+  philadelphiaCrab.src,
+  unagiCheese.src,
+  californiaShrimp.src,
+  premiumSalmon.src,
+  bonitoEel.src,
+  greenAlaska.src,
+  imperatorSalmon.src,
+];
 
 export type Language = "ru" | "uzLat" | "uzCy";
 
@@ -144,61 +183,68 @@ const saladDishes: Dish[] = [
     id: "salad1",
     name: "Beijing Style Eggplant",
     description: "Сочный баклажан с лёгкой азиатской заправкой и яркими травами.",
-    price: "340",
+    price: "34000",
     image: samuraiEggplant.src,
   },
   {
     id: "salad2",
     name: "Greek Salad",
     description: "Свежие овощи, сыр, маслины и ароматное оливковое масло.",
-    price: "390",
+    price: "39000",
     image: greekFreshSalad.src,
   },
   {
     id: "salad3",
     name: "Non Crispy Eggplant",
     description: "Мягкий баклажан с выразительным вкусом и нежной текстурой.",
-    price: "360",
+    price: "36000",
     image: samuraiEggplant.src,
   },
   {
     id: "salad4",
     name: "Prawn and Rocket Salad",
     description: "Креветки, руккола и свежие овощи в лёгком фирменном соусе.",
-    price: "430",
+    price: "43000",
     image: shrimpRocketSalad.src,
   },
   {
     id: "salad5",
     name: "Shrimp Caesar",
     description: "Салат с креветками, листьями салата, сыром и классическим соусом.",
-    price: "450",
+    price: "45000",
     image: shrimpCaesarSalad.src,
   },
   {
     id: "salad6",
     name: "Shrimp Chicken",
     description: "Комбинация курицы и креветок с освежающей овощной основой.",
-    price: "470",
+    price: "47000",
     image: chickenCaesarSalad.src,
   },
   {
     id: "salad7",
     name: "Shrimp with Passion Fruit Sauce",
     description: "Креветки в ярком соусе маракуйи с лёгкой кислинкой и свежестью.",
-    price: "490",
+    price: "49000",
     image: shrimpPassionSalad.src,
   },
   {
     id: "salad8",
     name: "Vitamin Salad",
     description: "Витаминный микс свежих овощей и зелени для лёгкого питания.",
-    price: "320",
+    price: "32000",
     image: salmonPoke.src,
   },
 ];
 
 const snackDishes: Dish[] = [
+  {
+    id: "snack-wasabi-shrimp",
+    name: "Креветки Васаби",
+    description: "Свежие креветки с лёгким васаби-акцентом и ярким вкусом.",
+    price: "59000",
+    image: snackWasabiShrimp.src,
+  },
   {
     id: "snack-soft-rolls",
     name: "Нежные роллы",
@@ -295,96 +341,45 @@ const pizzaDishes: Dish[] = [
   },
 ];
 
-const coldRollImages = [
-  coldRoll1.src,
-  coldRoll2.src,
-  coldRoll3.src,
-  coldRoll4.src,
-  coldRoll5.src,
-  coldRoll6.src,
-  coldRoll7.src,
-  coldRoll8.src,
-  coldRoll9.src,
-  coldRoll10.src,
-  coldRoll11.src,
-  coldRoll12.src,
-  coldRoll13.src,
-  coldRoll14.src,
-  coldRoll15.src,
-  coldRoll16.src,
-  coldRoll17.src,
-  coldRoll18.src,
-  coldRoll19.src,
-  coldRoll20.src,
-  coldRoll21.src,
-  coldRoll22.src,
-  coldRoll23.src,
-  coldRoll24.src,
-  coldRoll25.src,
-  coldRoll26.src,
-  coldRoll27.src,
-  coldRoll28.src,
-  coldRoll29.src,
-  coldRoll30.src,
-  coldRoll31.src,
-  coldRoll32.src,
-  coldRoll33.src,
-  coldRoll34.src,
-  coldRoll35.src,
-  coldRoll36.src,
-  coldRoll37.src,
-  coldRoll38.src,
-  coldRoll39.src,
-  coldRoll40.src,
-  coldRoll41.src,
-  coldRoll42.src,
-  coldRoll43.src,
-];
-
 const coldRollDishes: Dish[] = [
-  { id: "cold-roll-1", name: "Премиум Дракон", description: "Свежий ролл с фирменной начинкой.", price: "126", image: coldRollImages[0] },
-  { id: "cold-roll-2", name: "Филадельфия зелёный лук", description: "Нежный ролл с зелёным луком и сливочным вкусом.", price: "62", image: coldRollImages[1] },
-  { id: "cold-roll-3", name: "Мини с лососем", description: "Компактный ролл с лососем.", price: "39", image: coldRollImages[2] },
-  { id: "cold-roll-4", name: "Филадельфия креветка", description: "Сочный ролл с креветкой и сливочным сыром.", price: "68", image: coldRollImages[3] },
-  { id: "cold-roll-5", name: "Ясай", description: "Лёгкий ролл в классическом стиле.", price: "35", image: coldRollImages[4] },
-  { id: "cold-roll-6", name: "Том Ям", description: "Ролл с ярким и острым вкусом.", price: "75", image: coldRollImages[5] },
-  { id: "cold-roll-7", name: "Зелёная Аляска", description: "Свежий ролл с зелёным акцентом.", price: "60", image: coldRollImages[6] },
-  { id: "cold-roll-8", name: "Премиум креветка", description: "Премиальный ролл с креветкой.", price: "100", image: coldRollImages[7] },
-  { id: "cold-roll-9", name: "Филадельфия гигант", description: "Большой ролл с насыщенным вкусом.", price: "83.3", image: coldRollImages[8] },
-  { id: "cold-roll-10", name: "Мини с креветкой", description: "Мини-ролл с креветкой.", price: "26.43", image: coldRollImages[9] },
-  { id: "cold-roll-11", name: "Хрустящие роллы", description: "Роллы с хрустящей текстурой.", price: "53", image: coldRollImages[10] },
-  { id: "cold-roll-12", name: "Калифорния краб", description: "Ролл с крабом и свежими ингредиентами.", price: "52", image: coldRollImages[11] },
-  { id: "cold-roll-13", name: "Премиум тунец", description: "Тунец в премиальной подаче.", price: "134", image: coldRollImages[12] },
-  { id: "cold-roll-14", name: "Унаги урамаки", description: "Классический ролл с унаги.", price: "71.6", image: coldRollImages[13] },
-  { id: "cold-roll-15", name: "Император", description: "Фирменный ролл с богатым вкусом.", price: "80", image: coldRollImages[14] },
-  { id: "cold-roll-16", name: "Бонито с лососем", description: "Комбинация бонито и лосося.", price: "57.7", image: coldRollImages[15] },
-  { id: "cold-roll-17", name: "Мини с авокадо", description: "Мини-ролл с авокадо.", price: "23.4", image: coldRollImages[16] },
-  { id: "cold-roll-18", name: "Премиум гонконг", description: "Премиальный ролл в гонконгском стиле.", price: "110", image: coldRollImages[17] },
-  { id: "cold-roll-19", name: "Филадельфия ролл", description: "Классический филадельфия ролл.", price: "76.3", image: coldRollImages[18] },
-  { id: "cold-roll-20", name: "Император с креветкой", description: "Императорский ролл с креветкой.", price: "72", image: coldRollImages[19] },
-  { id: "cold-roll-21", name: "Самурай", description: "Ролл в фирменном самурайском стиле.", price: "37", image: coldRollImages[20] },
-  { id: "cold-roll-22", name: "Аляска", description: "Популярный ролл с классическим вкусом.", price: "60", image: coldRollImages[21] },
-  { id: "cold-roll-23", name: "Тобикири", description: "Нежный ролл с мягкой текстурой.", price: "84", image: coldRollImages[22] },
-  { id: "cold-roll-24", name: "Мини с огурцами", description: "Лёгкий мини-ролл с огурцом.", price: "25", image: coldRollImages[23] },
-  { id: "cold-roll-25", name: "Император", description: "Фирменный ролл с насыщенной начинкой.", price: "97", image: coldRollImages[24] },
-  { id: "cold-roll-26", name: "Филадельфия", description: "Классический сливочный ролл.", price: "84", image: coldRollImages[25] },
-  { id: "cold-roll-27", name: "Мини с угрем", description: "Мини-ролл с угрем.", price: "27", image: coldRollImages[26] },
-  { id: "cold-roll-28", name: "Ролл королевский", description: "Ролл с королевской подачей и вкусом.", price: "54", image: coldRollImages[27] },
-  { id: "cold-roll-29", name: "Ролл Калифорния с лососем", description: "Классическая Калифорния с лососем.", price: "56", image: coldRollImages[28] },
-  { id: "cold-roll-30", name: "Ф краб", description: "Ролл с крабом и свежей начинкой.", price: "85", image: coldRollImages[29] },
-  { id: "cold-roll-31", name: "Унаги", description: "Классический ролл с унаги.", price: "68", image: coldRollImages[30] },
-  { id: "cold-roll-32", name: "Калифорния креветка", description: "Ролл с креветкой в стиле Калифорния.", price: "63", image: coldRollImages[31] },
-  { id: "cold-roll-33", name: "Премиум лосось", description: "Премиальный ролл с лососем.", price: "112", image: coldRollImages[32] },
-  { id: "cold-roll-34", name: "Бонито", description: "Ролл с бонито и ярким вкусом.", price: "60", image: coldRollImages[33] },
-  { id: "cold-roll-35", name: "Маленький с угрем", description: "Небольшой ролл с угрем.", price: "28", image: coldRollImages[34] },
-  { id: "cold-roll-36", name: "Калифорния с лососем", description: "Свежий ролл Калифорния с лососем.", price: "56", image: coldRollImages[35] },
-  { id: "cold-roll-37", name: "Филадельфия краб", description: "Филадельфия с крабом.", price: "85", image: coldRollImages[36] },
-  { id: "cold-roll-38", name: "Унаги чиз", description: "Ролл с унаги и сыром.", price: "68", image: coldRollImages[37] },
-  { id: "cold-roll-39", name: "Калифорния креветка", description: "Классический ролл Калифорния с креветкой.", price: "62", image: coldRollImages[38] },
-  { id: "cold-roll-40", name: "Премиум лосось", description: "Премиальная версия ролла с лососем.", price: "112", image: coldRollImages[39] },
-  { id: "cold-roll-41", name: "Бонито с угрем", description: "Комбинация бонито и угря.", price: "60", image: coldRollImages[40] },
-  { id: "cold-roll-42", name: "Филадельфия зелёный лук", description: "Ролл с зелёным луком и сливочным сыром.", price: "62", image: coldRollImages[41] },
-  { id: "cold-roll-43", name: "Премиум Дракон", description: "Ролл премиум класса с фирменным вкусом.", price: "126", image: coldRollImages[42] },
+  { id: "cold-roll-1", name: "Премиум Дракон", description: "Свежий ролл с фирменной начинкой.", price: "126", image: premiumDragon.src },
+  { id: "cold-roll-2", name: "Филадельфия зелёный лук", description: "Нежный ролл с зелёным луком и сливочным вкусом.", price: "62", image: philadelphiaGreenOnion.src },
+  { id: "cold-roll-3", name: "Мини с лососем", description: "Компактный ролл с лососем.", price: "39", image: miniSalmon.src },
+  { id: "cold-roll-4", name: "Филадельфия креветка", description: "Сочный ролл с креветкой и сливочным сыром.", price: "68", image: philadelphiaShrimp.src },
+  { id: "cold-roll-5", name: "Ясай", description: "Лёгкий ролл в классическом стиле.", price: "35", image: yasay.src },
+  { id: "cold-roll-6", name: "Том Ям", description: "Ролл с ярким и острым вкусом.", price: "75", image: rollsTomYam.src },
+  { id: "cold-roll-7", name: "Бонито спайси", description: "Острый тунец, огурец, перец.", price: "60", image: bonitoSpicy.src },
+  { id: "cold-roll-8", name: "Премиум креветка", description: "Премиальный ролл с креветкой.", price: "100", image: premiumShrimp.src },
+  { id: "cold-roll-9", name: "Филадельфия гигант", description: "Большой ролл с насыщенным вкусом.", price: "83.3", image: philadelphiaGigant.src },
+  { id: "cold-roll-10", name: "Мини с креветкой", description: "Мини-ролл с креветкой.", price: "26.43", image: miniShrimp.src },
+  { id: "cold-roll-11", name: "Хрустящие роллы", description: "Роллы с хрустящей текстурой.", price: "53", image: crunchyRolls.src },
+  { id: "cold-roll-12", name: "Калифорния краб", description: "Ролл с крабом и свежими ингредиентами.", price: "52", image: californiaCrab.src },
+  { id: "cold-roll-13", name: "Премиум тунец", description: "Тунец в премиальной подаче.", price: "134", image: premiumTuna.src },
+  { id: "cold-roll-14", name: "Унаги урамаки", description: "Классический ролл с унаги.", price: "71.6", image: unagiUramaki.src },
+  { id: "cold-roll-15", name: "Император", description: "Фирменный ролл с богатым вкусом.", price: "80", image: imperator.src },
+  { id: "cold-roll-16", name: "Бонито с лососем", description: "Комбинация бонито и лосося.", price: "57.7", image: bonitoSalmon.src },
+  { id: "cold-roll-17", name: "Мини с авокадо", description: "Мини-ролл с авокадо.", price: "23.4", image: miniAvocado.src },
+  { id: "cold-roll-18", name: "Премиум гонконг", description: "Премиальный ролл в гонконгском стиле.", price: "110", image: premiumHongKong.src },
+  { id: "cold-roll-19", name: "Филадельфия ролл", description: "Классический филадельфия ролл.", price: "76.3", image: philadelphiaClassic.src },
+  { id: "cold-roll-20", name: "Император с креветкой", description: "Императорский ролл с креветкой.", price: "72", image: imperatorShrimp.src },
+  { id: "cold-roll-21", name: "Самурай", description: "Ролл в фирменном самурайском стиле.", price: "37", image: samurai.src },
+  { id: "cold-roll-22", name: "Аляска", description: "Популярный ролл с классическим вкусом.", price: "60", image: alaska.src },
+  { id: "cold-roll-23", name: "Тобикири", description: "Нежный ролл с мягкой текстурой.", price: "84", image: tobikiri.src },
+  { id: "cold-roll-24", name: "Мини с огурцами", description: "Лёгкий мини-ролл с огурцом.", price: "25", image: miniCucumber.src },
+  { id: "cold-roll-25", name: "Филадельфия", description: "Классический сливочный ролл.", price: "84", image: philadelphia.src },
+  { id: "cold-roll-26", name: "Мини с угрем", description: "Мини-ролл с угрем.", price: "27", image: miniEel.src },
+  { id: "cold-roll-27", name: "Ролл королевский", description: "Ролл с королевской подачей и вкусом.", price: "54", image: royalty.src },
+  { id: "cold-roll-28", name: "Ролл Калифорния с лососем", description: "Классическая Калифорния с лососем.", price: "56", image: californiaSalmon.src },
+  { id: "cold-roll-29", name: "Ф краб", description: "Ролл с крабом и свежей начинкой.", price: "85", image: philadelphiaCrab.src },
+  { id: "cold-roll-30", name: "Унаги", description: "Классический ролл с унаги.", price: "68", image: unagiCheese.src },
+  { id: "cold-roll-31", name: "Калифорния креветка", description: "Ролл с креветкой в стиле Калифорния.", price: "63", image: californiaShrimp.src },
+  { id: "cold-roll-32", name: "Премиум лосось", description: "Премиальный ролл с лососем.", price: "112", image: premiumSalmon.src },
+  { id: "cold-roll-33", name: "Бонито", description: "Ролл с бонито и ярким вкусом.", price: "60", image: bonitoEel.src },
+  { id: "cold-roll-34", name: "Маленький с угрем", description: "Небольшой ролл с угрем.", price: "28", image: miniEel.src },
+  { id: "cold-roll-35", name: "Калифорния с лососем", description: "Свежий ролл Калифорния с лососем.", price: "56", image: californiaSalmon.src },
+  { id: "cold-roll-36", name: "Филадельфия краб", description: "Филадельфия с крабом.", price: "85", image: philadelphiaCrab.src },
+  { id: "cold-roll-37", name: "Зелёная Аляска", description: "Свежий ролл с зелёным акцентом.", price: "60", image: greenAlaska.src },
+  { id: "cold-roll-38", name: "Император с лососем", description: "Ролл с лососем в императорском стиле.", price: "97", image: imperatorSalmon.src },
 ];
 
 const menu: MenuCategory[] = [
@@ -408,6 +403,8 @@ const menu: MenuCategory[] = [
         price: "147",
         image: setMini.src,
       },
+
+      
       {
         id: "set-samurai",
         name: "Сет Самурай",
@@ -562,63 +559,98 @@ const menu: MenuCategory[] = [
     id: "wok",
     name: "WOK",
     subtitle: "Азиатская кухня",
-    image: doubleBeef.src,
+    image: wokN12BeefRice.src,
     dishes: [
       {
+        id: "wok-n12-beef-rice",
+        name: "N-12 ВОК говядина с рисом",
+        description: "Говядина, рис и свежие овощи в ярком wok-соусе.",
+        price: "62000",
+        image: wokN12BeefRice.src,
+      },
+      {
+        id: "wok-n3-buckwheat-seafood",
+        name: "N-3 Гречневая лапша с морепродуктами",
+        description: "Гречневая лапша с морепродуктами и соусом wok.",
+        price: "83000",
+        image: wokN3SeafoodBuckwheat.src,
+      },
+      {
         id: "wok-double-beef",
-        name: "Двойной говядина",
-        description: "Говядина в ярком wok-соусе.",
-        price: "82",
-        image: doubleBeef.src,
+        name: "Вок №1 — двойная говядина",
+        description: "Насыщенный wok с двойной порцией говядины.",
+        price: "82000",
+        image: wokDoubleBeef.src,
       },
       {
-        id: "wok-chicken-udon",
-        name: "Вок лапша удон с курицей",
-        description: "Удон с курицей и овощами.",
-        price: "62",
-        image: chickenUdonWok.src,
+        id: "wok-n4-chicken-udon",
+        name: "N-4 ВОК лапша удон с курицей",
+        description: "Удон с курицей и овощами в классическом соусе.",
+        price: "62000",
+        image: wokN4ChickenUdon.src,
       },
       {
-        id: "wok-chicken",
-        name: "Вок с курицей",
-        description: "Курица, овощи и соус wok в сковороде.",
-        price: "65",
-        image: chickenWok.src,
+        id: "wok-n11-chicken",
+        name: "N-11 ВОК с курицей",
+        description: "Курица с овощами и ароматным соусом wok.",
+        price: "65600",
+        image: wokN11Chicken.src,
       },
       {
-        id: "wok-beef",
-        name: "Вок говяжий",
-        description: "Говядина с пикантным вкусом wok.",
-        price: "69",
-        image: beefWok.src,
+        id: "wok-n2-beef",
+        name: "N-2 ВОК говяжий",
+        description: "Говядина с хрустящими овощами и wok-ароматом.",
+        price: "69000",
+        image: wokN2Beef.src,
       },
       {
-        id: "wok-seafood",
-        name: "Вок морепродукты",
-        description: "Морепродукты в ароматном соусе.",
-        price: "74",
-        image: seafoodWok.src,
+        id: "wok-n6-seafood",
+        name: "N-6 ВОК с морепродуктами",
+        description: "Морепродукты с овощами и насыщенным соусом.",
+        price: "74000",
+        image: wokN6Seafood.src,
       },
       {
-        id: "wok-buckwheat",
-        name: "Гречневая лапша",
-        description: "Гречневая лапша с ярким wok-вкусом.",
-        price: "62",
-        image: buckwheatNoodles.src,
+        id: "wok-n9-chicken-buckwheat",
+        name: "N-9 Гречневая лапша с курицей",
+        description: "Гречневая лапша с курицей и яркими овощами.",
+        price: "63000",
+        image: wokN9ChickenBuckwheat.src,
       },
       {
-        id: "wok-beef-udon",
-        name: "Вок лапша удон с говядиной",
-        description: "Удон с говядиной и овощами.",
-        price: "70",
-        image: beefUdonWok.src,
+        id: "teriyaki-vegetables-rice",
+        name: "Овощи терияки с рисом",
+        description: "Лёгкий и сытный вариант с овощами и рисом.",
+        price: "25000",
+        image: teriyakiVegetablesRice.src,
       },
       {
-        id: "wok-chicken-noodles",
-        name: "Лапша с курицой",
-        description: "Лапша с курицей и ароматным соусом.",
-        price: "69",
-        image: chickenNoodles.src,
+        id: "wok-n7-salmon-udon",
+        name: "N-7 ВОК лапша удон с лососем",
+        description: "Удон с лососем и выразительным азиатским вкусом.",
+        price: "86000",
+        image: wokN7SalmonUdon.src,
+      },
+      {
+        id: "wok-n10-beef-buckwheat",
+        name: "N-10 Гречневая лапша с говядиной",
+        description: "Гречневая лапша с говядиной и овощами.",
+        price: "71300",
+        image: wokN10BeefBuckwheat.src,
+      },
+      {
+        id: "wok-n5-beef-udon",
+        name: "N-5 ВОК лапша удон с говядиной",
+        description: "Удон с говядиной, овощами и фирменным соусом.",
+        price: "69900",
+        image: wokN5BeefUdon.src,
+      },
+      {
+        id: "wok-n8-chicken-udon",
+        name: "N-8 Лапша удон с курицей",
+        description: "Лапша удон с курицей и классическим wok-вкусом.",
+        price: "60900",
+        image: wokN8ChickenUdon.src,
       },
     ],
   },
@@ -626,35 +658,35 @@ const menu: MenuCategory[] = [
     id: "soups",
     name: "Супы",
     subtitle: "Тёплые и насыщенные",
-    image: chickenNoodles.src,
+    image: wokN2Beef.src,
     dishes: [
       {
         id: "soup1",
         name: "Фобо",
         description: "Азиатский суп с говядиной и ароматными специями.",
         price: "52",
-        image: beefWok.src,
+        image: wokN2Beef.src,
       },
       {
         id: "soup2",
         name: "Крем-суп из шампиньонов",
         description: "Нежный сливочный суп с грибами и травами.",
         price: "59",
-        image: chickenNoodles.src,
+        image: wokN11Chicken.src,
       },
       {
         id: "soup3",
         name: "Рамен с говядиной",
         description: "Плотный и сытный суп с лапшой и говядиной.",
         price: "62",
-        image: beefUdonWok.src,
+        image: wokN10BeefBuckwheat.src,
       },
       {
         id: "soup4",
         name: "Том Ям",
         description: "Острый тайский суп с ярким пряным вкусом.",
         price: "73",
-        image: seafoodWok.src,
+        image: wokN6Seafood.src,
       },
     ],
   },
@@ -679,31 +711,59 @@ const menu: MenuCategory[] = [
     image: blueCuracaoMojito.src,
     dishes: [
       {
-        id: "mohito1",
+        id: "mohito-blue-small",
+        name: "Мохито Голубая Кюрасао маленький",
+        description: "Освежающий мохито с ярким вкусом голубой курасао в маленьком объёме.",
+        price: "17500",
+        image: blueCuracaoMojitoSmall.src,
+      },
+      {
+        id: "mohito-blue",
         name: "Мохито Голубая Кюрасао",
         description: "Освежающий мохито с ярким вкусом голубой курасао.",
-        price: "35",
+        price: "35400",
         image: blueCuracaoMojito.src,
       },
       {
-        id: "mohito2",
-        name: "Мохито манго",
-        description: "Свежий мохито с тропическим вкусом манго.",
-        price: "35",
+        id: "mohito-berry-small",
+        name: "Мохито клубничный маленький",
+        description: "Освежающий клубничный мохито в маленьком объёме.",
+        price: "17500",
+        image: berryMojitoSmall.src,
+      },
+      {
+        id: "mohito-berry",
+        name: "Мохито клубничный",
+        description: "Свежий клубничный мохито с приятной ягодной кислинкой.",
+        price: "35400",
         image: berryMojito.src,
       },
       {
-        id: "mohito3",
+        id: "mohito-orange-small",
+        name: "Мохито апельсиновый маленький",
+        description: "Освежающий апельсиновый мохито в маленьком объёме.",
+        price: "17500",
+        image: orangeMojitoSmall.src,
+      },
+      {
+        id: "mohito-orange",
         name: "Мохито апельсиновый",
         description: "Освежающий мохито с цитрусовой ноткой апельсина.",
-        price: "35",
+        price: "35400",
         image: orangeMojito.src,
       },
       {
-        id: "mohito4",
+        id: "mohito-passion-small",
+        name: "Мохито маракуйя маленький",
+        description: "Мохито с экзотическим вкусом маракуйи в маленьком объёме.",
+        price: "17500",
+        image: passionFruitMojitoSmall.src,
+      },
+      {
+        id: "mohito-passion",
         name: "Мохито маракуйя",
         description: "Мохито с экзотическим вкусом маракуйи и лёгкой кислинкой.",
-        price: "35",
+        price: "35400",
         image: passionFruitMojito.src,
       },
     ],
@@ -775,7 +835,7 @@ const translations: Record<Language, Record<string, string>> = {
   },
   uzLat: {
     category: "Katalog",
-    subcategory: "Pastki toifalar",
+    subcategory: "Bo'limlar",
     positions: "pozitsiya",
     order: "Buyurtma qiling",
     checkout: "Buyurtma berish",
@@ -787,28 +847,28 @@ const translations: Record<Language, Record<string, string>> = {
     comment: "Izoh",
     cancel: "Bekor qilish",
     send: "Buyurtmani yuborish",
-    placeholderName: "Akbar",
+    placeholderName: "Ali",
     placeholderPhone: "+998 99 123 45 67",
-    placeholderAddress: "Toshkent, Chilonzor ko'chasi, 12-uy",
-    placeholderComment: "Buyurtma bo'yicha fikrlar",
-    alertRequired: "Iltimos, ism, telefon va manzilni to'ldiring.",
-    alertTelegram: "Telegramga yuborish uchun NEXT_PUBLIC_TELEGRAM_BOT_TOKEN va NEXT_PUBLIC_TELEGRAM_CHAT_ID ni sozlang",
+    placeholderAddress: "Toshkent, Amir Temur ko'chasi, 12-uy",
+    placeholderComment: "Buyurtma uchun izoh",
+    alertRequired: "Iltimos, ismingiz, telefon va manzilni kiriting.",
+    alertTelegram: "Telegramga yuborish uchun NEXT_PUBLIC_TELEGRAM_BOT_TOKEN va NEXT_PUBLIC_TELEGRAM_CHAT_ID sozlamalarini kiriting",
     success: "Buyurtma Telegramga yuborildi!",
     error: "Buyurtma Telegramga yuborilmadi. Bot sozlamalarini tekshiring.",
     defaultTitle: "Buyurtma",
     cart: "Savat",
-    cartEmpty: "Savatingiz bo'sh",
+    cartEmpty: "Savat bo'sh",
     addToCart: "Savatga qo'shish",
     clear: "Tozalash",
     continue: "Davom etish",
     totalLabel: "Umumiy summa",
-    itemCount: "ta mahsulot",
+    itemCount: "mahsulot",
     orderButton: "Buyurtma berish",
     formTitle: "Mijoz ma'lumotlari",
   },
   uzCy: {
     category: "Каталог",
-    subcategory: "Пастки тоифалар",
+    subcategory: "Бўлимлар",
     positions: "позициялар",
     order: "Буюртма бериш",
     checkout: "Буюртма бериш",
@@ -820,22 +880,22 @@ const translations: Record<Language, Record<string, string>> = {
     comment: "Изоҳ",
     cancel: "Бекор қилиш",
     send: "Буюртмани юбориш",
-    placeholderName: "Акбар",
+    placeholderName: "Али",
     placeholderPhone: "+998 99 123 45 67",
-    placeholderAddress: "Тошкент, Чилонзор кўчаси, 12-уй",
-    placeholderComment: "Буюртма ҳақида фикрлар",
-    alertRequired: "Илтимос, исм, телефон ва манзилни тўлдиринг.",
-    alertTelegram: "Telegramга юбориш учун NEXT_PUBLIC_TELEGRAM_BOT_TOKEN ва NEXT_PUBLIC_TELEGRAM_CHAT_ID ни созинг",
+    placeholderAddress: "Тошкент, Амир Темур кўчаси, 12-уй",
+    placeholderComment: "Буюртма учун изоҳ",
+    alertRequired: "Илтимос, исмингиз, телефон ва манзилни киритинг.",
+    alertTelegram: "Telegramга юбориш учун NEXT_PUBLIC_TELEGRAM_BOT_TOKEN ва NEXT_PUBLIC_TELEGRAM_CHAT_ID созламаларини киритинг",
     success: "Буюртма Telegramга юборилди!",
     error: "Буюртма Telegramга юборилмади. Бот созламаларини текширинг.",
     defaultTitle: "Буюртма",
-    cart: "Корзина",
-    cartEmpty: "Корзина бўш",
-    addToCart: "Корзинага қўшиш",
+    cart: "Сават",
+    cartEmpty: "Сават бўш",
+    addToCart: "Саватга қўшиш",
     clear: "Тозалаш",
     continue: "Давом эттириш",
     totalLabel: "Умумий сумма",
-    itemCount: "та маҳсулот",
+    itemCount: "махсулот",
     orderButton: "Буюртма бериш",
     formTitle: "Мижоз маълумотлари",
   },
@@ -843,29 +903,30 @@ const translations: Record<Language, Record<string, string>> = {
 
 const subcategoryNameLabels: Record<string, Record<Language, string>> = {
   tea: { ru: "Чай", uzLat: "Choy", uzCy: "Чой" },
+  lemonades: { ru: "Лимонады", uzLat: "Limonadlar", uzCy: "Лимонадлар" },
   lemonade: { ru: "Лимонады", uzLat: "Limonadlar", uzCy: "Лимонадлар" },
 };
 
 const saladNameLabels: Record<string, Record<Language, string>> = {
-  salad1: { ru: "Баклажаны по-пекински", uzLat: "Beijing Style Eggplant", uzCy: "Пекин баклажонлари" },
-  salad2: { ru: "Греческий салат", uzLat: "Greek Salad", uzCy: "Грек салати" },
-  salad3: { ru: "Нежные баклажаны", uzLat: "Non Crispy Eggplant", uzCy: "Нозик баклажанлар" },
-  salad4: { ru: "Салат с креветками и рукколой", uzLat: "Prawn and Rocket Salad", uzCy: "Креветка ва руккола салати" },
-  salad5: { ru: "Креветочный Цезарь", uzLat: "Shrimp Caesar", uzCy: "Креветка Сезар" },
-  salad6: { ru: "Курица с креветками", uzLat: "Shrimp Chicken", uzCy: "Креветка курка" },
-  salad7: { ru: "Креветки с соусом маракуйи", uzLat: "Shrimp with Passion Fruit Sauce", uzCy: "Маракуя соусли креветка" },
-  salad8: { ru: "Витаминный салат", uzLat: "Vitamin Salad", uzCy: "Витамин салати" },
+  salad1: { ru: "Баклажаны по-пекински", uzLat: "Pekin uslubidagi badyan", uzCy: "Пекин услубидаги бадиян" },
+  salad2: { ru: "Греческий салат", uzLat: "Grek salati", uzCy: "Грек салати" },
+  salad3: { ru: "Нежные баклажаны", uzLat: "Yumshoq badyanlar", uzCy: "Нозик бадиянлар" },
+  salad4: { ru: "Салат с креветками и рукколой", uzLat: "Krevetka va rukkola salati", uzCy: "Креветка ва руккола салати" },
+  salad5: { ru: "Креветочный Цезарь", uzLat: "Krevetka Caesar", uzCy: "Креветка Сезар" },
+  salad6: { ru: "Курица с креветками", uzLat: "Krevetka bilan tovuq", uzCy: "Креветка билан товуқ" },
+  salad7: { ru: "Креветки с соусом маракуйи", uzLat: "Marakuya sousli krevetka", uzCy: "Маракуя соусли креветка" },
+  salad8: { ru: "Витаминный салат", uzLat: "Vitamin salati", uzCy: "Витамин салати" },
 };
 
 const pizzaNameLabels: Record<string, Record<Language, string>> = {
-  pizza1: { ru: "Пицца с курицей", uzLat: "Chicken Pizza", uzCy: "Пицца с курицей" },
-  pizza2: { ru: "Пицца 4 сыра", uzLat: "Four Cheese Pizza", uzCy: "Пицца 4 сыра" },
+  pizza1: { ru: "Пицца с курицей", uzLat: "Tovuqli pitsa", uzCy: "Товуқли пицца" },
+  pizza2: { ru: "Пицца 4 сыра", uzLat: "4 ta pishloqli pitsa", uzCy: "4 та пишлоқли пицца" },
   pizza3: { ru: "Пепперони", uzLat: "Pepperoni", uzCy: "Пепперони" },
   pizza4: { ru: "Фуме", uzLat: "Fume", uzCy: "Фуме" },
-  pizza5: { ru: "Пицца 4 сезона", uzLat: "Pizza 4 Seasons", uzCy: "Пицца 4 сезона" },
-  pizza6: { ru: "Мексиканская", uzLat: "Mexican Pizza", uzCy: "Мексиканская" },
+  pizza5: { ru: "Пицца 4 сезона", uzLat: "4 faslli pitsa", uzCy: "4 фаслли пицца" },
+  pizza6: { ru: "Мексиканская", uzLat: "Meksikan pitsa", uzCy: "Мексикан пицца" },
   pizza7: { ru: "Маргарита", uzLat: "Margarita", uzCy: "Маргарита" },
-  pizza8: { ru: "BBQ Пицца", uzLat: "BBQ Pizza", uzCy: "BBQ Пицца" },
+  pizza8: { ru: "BBQ Пицца", uzLat: "BBQ pitsa", uzCy: "BBQ пицца" },
 };
 
 const dishDescriptionLabels: Record<string, Record<Language, string>> = {
@@ -943,21 +1004,35 @@ const getLocalizedDishDescription = (dishId: string, fallback: string, language:
   return dishDescriptionLabels[dishId]?.[language] ?? fallback;
 };
 
+const normalizePriceAmount = (price: string) => {
+  const digits = Number((price || "0").replace(/[^\d.]/g, ""));
+  if (!Number.isFinite(digits)) {
+    return 0;
+  }
+
+  const normalized = digits >= 1000 ? digits : digits * 1000;
+  return Math.round(normalized);
+};
+
 const formatUzs = (amount: number, language: Language) => {
+  const formatted = Number(amount).toLocaleString(language === "ru" ? "ru-RU" : "uz-UZ", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  });
+
   if (language === "ru") {
-    return `${amount.toLocaleString("ru-RU")} сум`;
+    return `${formatted} сум`;
   }
 
   if (language === "uzLat") {
-    return `${amount.toLocaleString("uz-UZ")} so'm`;
+    return `${formatted} so'm`;
   }
 
-  return `${amount.toLocaleString("uz-UZ")} сўм`;
+  return `${formatted} сўм`;
 };
 
 const formatPrice = (price: string, language: Language) => {
-  const digits = Number((price || "0").replace(/[^\d]/g, ""));
-  return formatUzs(digits * 1000, language);
+  return formatUzs(normalizePriceAmount(price), language);
 };
 
 type CartItem = {
@@ -997,12 +1072,21 @@ const Category = ({ language }: { language: Language }) => {
 
   const displayedDishes = activeSubcategory?.dishes ?? activeCategory.dishes ?? [];
   const isLemonadeImage = (image: string) =>
-    [blueCuracaoMojito.src, orangeMojito.src, berryMojito.src, passionFruitMojito.src].includes(image);
+    [
+      blueCuracaoMojito.src,
+      blueCuracaoMojitoSmall.src,
+      orangeMojito.src,
+      orangeMojitoSmall.src,
+      berryMojito.src,
+      berryMojitoSmall.src,
+      passionFruitMojito.src,
+      passionFruitMojitoSmall.src,
+    ].includes(image);
 
   const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   const cartTotal = cartItems.reduce((sum, item) => {
-    const priceValue = Number((item.dish.price || "0").replace(/[^\d]/g, ""));
-    return sum + priceValue * 1000 * item.quantity;
+    const priceValue = normalizePriceAmount(item.dish.price);
+    return sum + priceValue * item.quantity;
   }, 0);
 
   const addToCart = (dish: Dish) => {
@@ -1206,6 +1290,7 @@ const Category = ({ language }: { language: Language }) => {
                       <Image
                         src={subcategory.image}
                         alt={subcategory.name}
+                        title={subcategory.name}
                         width={800}
                         height={600}
                         loading="eager"
@@ -1246,6 +1331,7 @@ const Category = ({ language }: { language: Language }) => {
                     <Image
                       src={dish.image}
                       alt={displayName}
+                      title={displayName}
                       width={800}
                       height={600}
                       loading="eager"
@@ -1311,7 +1397,7 @@ const Category = ({ language }: { language: Language }) => {
             </a>
 
             <a
-              href="https://instagram.com/samurai_uz"
+              href="https://www.instagram.com/samurai_house_bukhara?vrfl=MTg1aHllZHp0M3UyMA=="
               target="_blank"
               rel="noreferrer"
               className="group flex items-center gap-4 rounded-2xl border border-pink-500/40 bg-pink-500/10 p-4 transition hover:border-pink-400 hover:bg-pink-500/15"
@@ -1325,7 +1411,7 @@ const Category = ({ language }: { language: Language }) => {
               </div>
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-white/60">Instagram</p>
-                <p className="mt-1 text-lg font-bold text-white">@samurai_uz</p>
+                <p className="mt-1 text-lg font-bold text-white">@samurai_house_bukhara</p>
               </div>
             </a>
           </div>
@@ -1395,6 +1481,7 @@ const Category = ({ language }: { language: Language }) => {
                     <Image
                       src={item.dish.image}
                       alt={item.dish.name}
+                      title={item.dish.name}
                       width={120}
                       height={120}
                       className={`h-20 w-20 rounded-xl ${isLemonadeImage(item.dish.image) ? "object-contain object-center bg-[#12090c] p-1" : "object-cover"}`}
