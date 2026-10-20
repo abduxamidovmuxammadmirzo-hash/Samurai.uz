@@ -2,8 +2,8 @@ import AppShell from "@/components/AppShell";
 
 export default function Home() {
   return (
-    <div>
+    <main className="min-h-screen bg-[#12090c]">
       <AppShell />
-    </div>
+    </main>
   );
 }

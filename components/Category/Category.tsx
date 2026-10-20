@@ -1418,6 +1418,34 @@ const Category = ({ language }: { language: Language }) => {
         </div>
       </section>
 
+      <section className="mx-auto mt-10 max-w-6xl px-4 pb-4 sm:px-6 lg:px-8">
+        <div className="overflow-hidden rounded-[30px] border border-red-800/70 bg-[#1b090d] shadow-2xl shadow-black/20">
+          <div className="flex flex-col gap-3 border-b border-red-800/70 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
+            <div>
+              <p className="text-xs uppercase tracking-[0.24em] text-amber-200/80">Адрес</p>
+              <h3 className="mt-1 text-xl font-black text-white">QC45+8G, Bukhara, Uzbekistan</h3>
+            </div>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=QC45%2B8G+Bukhara+Uzbekistan"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-amber-400/60 bg-amber-500/10 px-4 py-2 text-sm font-bold uppercase tracking-[0.16em] text-amber-100 transition hover:bg-amber-500/15"
+            >
+              Открыть карту
+            </a>
+          </div>
+
+          <iframe
+            title="Samurai House location"
+            src="https://www.google.com/maps?q=QC45%2B8G%20Bukhara%2C%20Uzbekistan&z=15&output=embed"
+            className="h-[320px] w-full border-0"
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </section>
+
       <button
         type="button"
         onClick={() => setIsCartOpen(true)}
