@@ -832,6 +832,10 @@ const translations: Record<Language, Record<string, string>> = {
     itemCount: "товар",
     orderButton: "Оформить заказ",
     formTitle: "Данные клиента",
+    contacts: "Контакты",
+    addressLabel: "Адрес",
+    mapOpen: "Открыть карту",
+    mapTitle: "SAMURAI SUSHI BUKHARA",
   },
   uzLat: {
     category: "Katalog",
@@ -865,6 +869,10 @@ const translations: Record<Language, Record<string, string>> = {
     itemCount: "mahsulot",
     orderButton: "Buyurtma berish",
     formTitle: "Mijoz ma'lumotlari",
+    contacts: "Kontaktlar",
+    addressLabel: "Manzil",
+    mapOpen: "Karta ochish",
+    mapTitle: "SAMURAI SUSHI BUKHARA",
   },
   uzCy: {
     category: "Каталог",
@@ -898,6 +906,10 @@ const translations: Record<Language, Record<string, string>> = {
     itemCount: "махсулот",
     orderButton: "Буюртма бериш",
     formTitle: "Мижоз маълумотлари",
+    contacts: "Контактлар",
+    addressLabel: "Манзил",
+    mapOpen: "Карта очиш",
+    mapTitle: "SAMURAI SUSHI BUKHARA",
   },
 };
 
@@ -1255,13 +1267,13 @@ const Category = ({ language }: { language: Language }) => {
           })}
         </div>
 
-        <div className="mt-8 rounded-3xl border border-red-800/40 bg-[#310d15] p-5 shadow-2xl shadow-black/20">
-          <div className="mb-6 flex items-center justify-between gap-3">
-            <div>
-              <p className="text-xs uppercase tracking-[0.28em] text-amber-200/80">{translations[language].category}</p>
-              <h2 className="mt-2 text-3xl font-black text-white">{labelForCategory(activeCategory.id, language)}</h2>
+        <div className="mt-8 rounded-3xl border border-red-800/40 bg-[#310d15] p-4 shadow-2xl shadow-black/20 sm:p-5">
+          <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="min-w-0">
+              <p className="text-[10px] uppercase tracking-[0.22em] text-amber-200/80 sm:text-xs">{translations[language].category}</p>
+              <h2 className="mt-2 text-2xl font-black text-white sm:text-3xl">{labelForCategory(activeCategory.id, language)}</h2>
             </div>
-            <span className="rounded-full border border-red-700 bg-red-950/70 px-3 py-1 text-xs uppercase tracking-[0.2em] text-red-100/80">
+            <span className="inline-flex max-w-full rounded-full border border-red-700 bg-red-950/70 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-red-100/80 sm:text-xs">
               {getLocalizedCategorySubtitle(activeCategory.id, activeCategory.subtitle, language)}
             </span>
           </div>
@@ -1363,7 +1375,7 @@ const Category = ({ language }: { language: Language }) => {
       </div>
 
       <section id="contacts" className="mx-auto mt-10 max-w-6xl px-4 pb-12 sm:px-6 lg:px-8">
-        <div className="rounded-[30px] border border-red-800/70 bg-gradient-to-r from-[#1b090d] via-[#2b0d14] to-[#1d090e] p-6 shadow-2xl shadow-black/20 sm:p-8">
+        <div className="rounded-[30px] border border-red-800/70 bg-gradient-to-r from-[#1b090d] via-[#2b0d14] to-[#1d090e] p-5 shadow-2xl shadow-black/20 sm:p-8">
           <div className="mb-6 flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-amber-500/15 text-amber-300">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5" aria-hidden="true">
@@ -1373,8 +1385,8 @@ const Category = ({ language }: { language: Language }) => {
               </svg>
             </div>
             <div>
-              <p className="text-xs uppercase tracking-[0.24em] text-amber-200/80">Контакты</p>
-              <h3 className="mt-1 text-2xl font-black text-white">Samurai</h3>
+              <p className="text-xs uppercase tracking-[0.24em] text-amber-200/80">{translations[language].contacts}</p>
+              <h3 className="mt-1 text-2xl font-black text-white">{translations[language].mapTitle}</h3>
             </div>
           </div>
 
@@ -1421,24 +1433,24 @@ const Category = ({ language }: { language: Language }) => {
       <section className="mx-auto mt-10 max-w-6xl px-4 pb-4 sm:px-6 lg:px-8">
         <div className="overflow-hidden rounded-[30px] border border-red-800/70 bg-[#1b090d] shadow-2xl shadow-black/20">
           <div className="flex flex-col gap-3 border-b border-red-800/70 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
-            <div>
-              <p className="text-xs uppercase tracking-[0.24em] text-amber-200/80">Адрес</p>
-              <h3 className="mt-1 text-xl font-black text-white">QC45+8G, Bukhara, Uzbekistan</h3>
+            <div className="min-w-0">
+              <p className="text-[10px] uppercase tracking-[0.24em] text-amber-200/80 sm:text-xs">{translations[language].addressLabel}</p>
+              <h3 className="mt-1 text-lg font-black text-white sm:text-xl">{translations[language].mapTitle}</h3>
             </div>
             <a
-              href="https://www.google.com/maps/search/?api=1&query=QC45%2B8G+Bukhara+Uzbekistan"
+              href="https://www.google.com/maps/place/SAMURAI+SUSHI+BUKHARA/@39.7558196,64.3984589,2352m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3f50075ebd56980d:0xf73ac66c15f8e3bb!8m2!3d39.7558036!4d64.4087587!16s%2Fg%2F11p1c58f0b?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-amber-400/60 bg-amber-500/10 px-4 py-2 text-sm font-bold uppercase tracking-[0.16em] text-amber-100 transition hover:bg-amber-500/15"
+              className="inline-flex items-center justify-center rounded-full border border-amber-400/60 bg-amber-500/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-amber-100 transition hover:bg-amber-500/15 sm:text-sm"
             >
-              Открыть карту
+              {translations[language].mapOpen}
             </a>
           </div>
 
           <iframe
-            title="Samurai House location"
-            src="https://www.google.com/maps?q=QC45%2B8G%20Bukhara%2C%20Uzbekistan&z=15&output=embed"
-            className="h-[320px] w-full border-0"
+            title={translations[language].mapTitle}
+            src="https://www.google.com/maps?q=39.7558036,64.4087587&z=16&output=embed"
+            className="h-[260px] w-full border-0 sm:h-[320px]"
             loading="lazy"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
